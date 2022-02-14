@@ -1,0 +1,21 @@
+<div class="rest-api-countries-container row d-flex flex-column">
+
+    <div class="all-countries-container row">
+        <div 
+            class="country-container" 
+            *ngFor="let country of countries"
+            [routerLink]="['country', country.name.common]"
+            >
+                <div class="country-image-container">
+                    <img src={{country.flags.png}} />
+                </div>
+                <div class="country-information-container">
+                    <h5>{{country.name.common}}</h5>
+                    <p><span class="font-weight-bold-light">Population: </span>{{country.population}}</p>
+                    <p><span class="font-weight-bold-light">Region: </span>{{country.region}}</p>
+                    <p><span class="font-weight-bold-light">Capital: </span>{{country.capital}}</p>
+                </div>
+        </div>
+    </div>
+    
+</div>
