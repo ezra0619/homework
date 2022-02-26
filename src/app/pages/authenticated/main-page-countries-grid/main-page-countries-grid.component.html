@@ -1,13 +1,13 @@
-<div class="rest-api-countries-container row d-flex flex-column">
+<div class="rest-api-countries-container container">
 
-    <div class="all-countries-container row">
+    <div class="all-countries-container row justify-content-center">
         <div 
-            class="country-container" 
+            class="country-container col-12 col-md-6 col-lg-4" 
             *ngFor="let country of countries"
-            [routerLink]="['country', country.name.common]"
+            [routerLink]="['/countries', country.name.common]"
             >
                 <div class="country-image-container">
-                    <img src={{country.flags.png}} />
+                    <img [src]="country.flags.png" />
                 </div>
                 <div class="country-information-container">
                     <h5>{{country.name.common}}</h5>

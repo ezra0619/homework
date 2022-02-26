@@ -6,8 +6,9 @@ import { PageNotFoundComponent } from './pages/authenticated/page-not-found/page
 
 
 const routes: Routes = [
-  {path: "", component: MainPageCountriesGridComponent},
-  {path: "country/:country", component: IndividualCountryComponent},
+  {path: "countries", component: MainPageCountriesGridComponent},
+  {path: "countries/:countryId", component: IndividualCountryComponent},
+  {path: "", redirectTo: '/countries', pathMatch: 'full'}, 
   {path: "**", pathMatch: "full", component: PageNotFoundComponent}
 ];
 
